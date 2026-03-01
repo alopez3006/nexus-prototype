@@ -11,7 +11,7 @@
  */
 
 const { program } = require('commander');
-const NexusOrchestrator = require('../lib/orchestrator');
+const NexusOrchestrator = require('../lib/orchestrator-cloud');
 const fs = require('fs');
 const os = require('os');
 
