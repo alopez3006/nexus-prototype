@@ -1,0 +1,151 @@
+{
+  "version": "2.0.0",
+  "mode": "cloud",
+  "vutlerUrl": "https://app.vutler.ai",
+  "agents": [
+    {
+      "id": "mike",
+      "name": "Mike (Code Expert)",
+      "description": "Senior engineer - coding, debugging, architecture",
+      "location": "Vutler Cloud",
+      "skills": ["coding", "debugging", "architecture", "git", "api", "database"],
+      "enabled": true,
+      "priority": 100
+    },
+    {
+      "id": "philip",
+      "name": "Philip (UI/UX Designer)",
+      "description": "UI/UX design, wireframes, frontend",
+      "location": "Vutler Cloud",
+      "skills": ["design", "ui", "ux", "wireframes", "frontend", "css"],
+      "enabled": true,
+      "priority": 90
+    },
+    {
+      "id": "luna",
+      "name": "Luna (Product Manager)",
+      "description": "Product strategy, user stories, roadmap",
+      "location": "Vutler Cloud",
+      "skills": ["product", "strategy", "planning", "user-stories"],
+      "enabled": true,
+      "priority": 80
+    },
+    {
+      "id": "andrea",
+      "name": "Andrea (Office Manager)",
+      "description": "Admin, legal, compliance, organization",
+      "location": "Vutler Cloud",
+      "skills": ["admin", "legal", "compliance", "organization"],
+      "enabled": true,
+      "priority": 70
+    },
+    {
+      "id": "max",
+      "name": "Max (Marketing)",
+      "description": "Marketing, growth, content strategy",
+      "location": "Vutler Cloud",
+      "skills": ["marketing", "growth", "content", "social-media"],
+      "enabled": true,
+      "priority": 60
+    },
+    {
+      "id": "oscar",
+      "name": "Oscar (Content Writer)",
+      "description": "Content creation, copywriting, documentation",
+      "location": "Vutler Cloud",
+      "skills": ["writing", "content", "copywriting", "documentation"],
+      "enabled": true,
+      "priority": 50
+    },
+    {
+      "id": "nora",
+      "name": "Nora (Community Manager)",
+      "description": "Community engagement, Discord, social",
+      "location": "Vutler Cloud",
+      "skills": ["community", "discord", "social", "engagement"],
+      "enabled": true,
+      "priority": 40
+    },
+    {
+      "id": "victor",
+      "name": "Victor (Sales)",
+      "description": "Sales, business development, partnerships",
+      "location": "Vutler Cloud",
+      "skills": ["sales", "business", "partnerships", "deals"],
+      "enabled": true,
+      "priority": 30
+    },
+    {
+      "id": "rex",
+      "name": "Rex (QA Engineer)",
+      "description": "Quality assurance, testing, validation",
+      "location": "Vutler Cloud",
+      "skills": ["qa", "testing", "validation", "quality"],
+      "enabled": true,
+      "priority": 20
+    },
+    {
+      "id": "stephen",
+      "name": "Stephen (Research)",
+      "description": "Research, analysis, documentation",
+      "location": "Vutler Cloud",
+      "skills": ["research", "analysis", "documentation"],
+      "enabled": true,
+      "priority": 10
+    }
+  ],
+  "routing": {
+    "default": "mike",
+    "strategy": "keyword-match",
+    "keywords": {
+      "code": ["mike"],
+      "bug": ["mike"],
+      "fix": ["mike"],
+      "debug": ["mike"],
+      "api": ["mike"],
+      "database": ["mike"],
+      "sql": ["mike"],
+      "backend": ["mike"],
+      "design": ["philip"],
+      "wireframe": ["philip"],
+      "ui": ["philip"],
+      "ux": ["philip"],
+      "frontend": ["philip"],
+      "css": ["philip"],
+      "product": ["luna"],
+      "roadmap": ["luna"],
+      "story": ["luna"],
+      "planning": ["luna"],
+      "admin": ["andrea"],
+      "legal": ["andrea"],
+      "compliance": ["andrea"],
+      "contract": ["andrea"],
+      "marketing": ["max"],
+      "growth": ["max"],
+      "campaign": ["max"],
+      "content": ["oscar"],
+      "write": ["oscar"],
+      "blog": ["oscar"],
+      "community": ["nora"],
+      "discord": ["nora"],
+      "social": ["nora"],
+      "sales": ["victor"],
+      "deal": ["victor"],
+      "partnership": ["victor"],
+      "test": ["rex"],
+      "qa": ["rex"],
+      "validate": ["rex"],
+      "research": ["stephen"]
+    },
+    "fallback": "mike"
+  },
+  "limits": {
+    "maxConcurrentAgents": 5,
+    "maxTokensPerTask": 100000,
+    "timeoutSeconds": 300
+  },
+  "tracking": {
+    "enabled": true,
+    "logPath": "~/.vutler/logs/agent-tasks.jsonl"
+  }
+}
